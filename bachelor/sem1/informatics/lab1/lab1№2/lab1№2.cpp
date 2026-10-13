@@ -1,20 +1,23 @@
 #include <iostream>
-#include <cmath>
+#include <clocale>
 using namespace std;
+
 int main() {
-    float a = 100;
-    float b = 0.001;
-    float c, n,s,k,x;
-    c = pow(a+b, 4);
-    n = a + pow(a , 3)*4*b;
-    s = 6*a*a*b*b;
-    k = 4 * a * pow(b , 3) + pow(b , 4);
-    x = c - (n + s); 
-    cout << fixed <<c << endl;
-    cout << fixed << n << endl;
-    cout << fixed << s << endl;
-    cout << fixed << k << endl;
-    cout << fixed << x << endl;
-    cout << fixed << x/k;
+    int n, m;
+    cout << "Введите n, m: ";
+    cin >> n >> m;
+    cout << endl << "Первое выражение: n++ - m" << endl;
+    cout << "Результат: " << n++ - m << endl; /* сначала вычитание старого значения m из старого значения n,
+    затем увеличение n на 1 */
+    cout << "n = " << n << ", m = " << m << endl; // n увеличивается на 1, m не изменяется
+    cout << endl << "Второе выражение: m-- > n" << endl;
+    cout << "Результат: " << (m-- > n) << endl; /* сначала сравнение старого значения m с текущим n,
+    затем уменьшение m на 1 */
+    cout << "n = " << n << ", m = " << m << endl; // n не изменяется, m уменьшается на 1
+    cout << endl << "Третье выражение: n-- > m" << endl;
+    cout << "Результат: " << (n-- > m) << endl; /* сначала сравнение старого значения n с текущим m,
+    затем уменьшение n на 1 */
+    cout << "n = " << n << ", m = " << m << endl; // n уменьшается на 1, m не изменяется
+
     return 0;
 }
