@@ -2,9 +2,9 @@
 #include <cmath>
 using namespace std;
 int main() {
-    double a = 100;
-    double b = 0.001;
-    double c, n,s,k,x;
+    float a = 100;
+    float b = 0.001;
+    float c, n,s,k,x;
     c = pow(a+b, 4);
     n = a + pow(a , 3)*4*b;
     s = 6*a*a*b*b;
